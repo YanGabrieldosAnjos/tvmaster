@@ -6,7 +6,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Scanner;
 import com.tvmaster.client.model.ClientDAO;
-
+import com.tvmaster.centralDeChamada.CentraldeChamada;
 
 /**
  *
@@ -36,7 +36,7 @@ public class tvmaster {
                         case 1:
                             //comprar assinatura;
                             System.out.println("---- Comprar Assinatura ----\n");
-                            add.
+                            
                           break;
                         case 2:
                             System.exit(1);
@@ -65,8 +65,22 @@ public class tvmaster {
                                 
                             case 4:
                                 System.out.println("---- Criar Chamado ----\n");
-                               
-                             case 5:
+                                
+                                System.out.println("Qual o id?");
+                                int iD= entrada.nextInt();
+                                
+                                System.out.println("Qual a Data?");
+                                String dt = entrada.nextLine();
+                                
+                                System.out.println("Qual o motivo?");
+                                String mot=entrada.nextLine();
+                                
+                                System.out.println("Qual a situação?");
+                                String sit=entrada.nextLine();
+                                
+                                CentraldeChamada c=new CentraldeChamada(iD,dt,mot,sit);
+                                //adcionar a uma estrutura de dados ou a um bd
+                            case 5:
                                 System.out.println("---- Sair ----\n");
                                 break;
                     

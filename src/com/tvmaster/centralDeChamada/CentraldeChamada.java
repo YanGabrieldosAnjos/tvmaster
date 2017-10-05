@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package com.tvmaster.centralDeChamada;
-
+import java.util.Scanner;
 /**
  *
  * @author YAN
@@ -14,13 +14,16 @@ public class CentraldeChamada {
     private String data;
     private String motivo;
     private String situacao;
-
+    
+    Scanner s = new Scanner(System.in);
+   
     public CentraldeChamada(int id, String data, String motivo, String situacao) {
         this.id = id;
         this.data = data;
         this.motivo = motivo;
         this.situacao = situacao;
     }
+    
 
     public int getId() {
         return id;
@@ -53,5 +56,7 @@ public class CentraldeChamada {
     public void setSituacao(String situacao) {
         this.situacao = situacao;
     }
+
+   
     
 }

@@ -5,7 +5,7 @@
  */
 
 package com.tvmaster.contrato;
-
+import java.util.Scanner;
 
 /**
  *
@@ -16,7 +16,9 @@ public class Contrato {
     private int quantReceptor;
     private String endereço;
     private int tipoDePlano;
-
+    
+    Scanner s = new Scanner(System.in);
+    
     public Contrato(String numeroDeContrato, int quantReceptor, String endereço, int tipoDePlano) {
         this.numeroDeContrato = numeroDeContrato;
         this.quantReceptor = quantReceptor;
@@ -25,9 +27,37 @@ public class Contrato {
     }
     
     
-    public void alteraContrato(int x){
+    public void alteraContrato(){
+        System.out.println("O que deseja alterar?");
+        System.out.println("1.Numero de contrato");
+        System.out.println("2.Quantidade de receptores");
+        System.out.println("3.Endereço");
+        System.out.println("4.Tipo de plano");
         
+        int desejo= s.nextInt();
         
+        switch (desejo) {
+            case 1:
+                String numContrato=s.nextLine();
+                this.numeroDeContrato=numContrato;
+                break;
+            case 2:
+                int qtReceptores=s.nextInt();
+                this.quantReceptor=qtReceptores;
+                break;
+            case 3:
+                String end=s.nextLine();
+               this.endereço=end;
+                break;
+            case 4:
+               int  plano=s.nextInt();
+               this.tipoDePlano=plano;
+               break;
+            default:
+                break;
+        }
+                
+       
         
     }
 
